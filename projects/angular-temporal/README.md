@@ -1,6 +1,6 @@
 # Temporal for Angular
 
-[![npm version](https://img.shields.io/npm/v/angular-temporal.svg)](https://www.npmjs.com/package/angular-temporal)
+[![npm version](https://img.shields.io/npm/v/@the-code-haven/angular-temporal.svg)](https://www.npmjs.com/package/@the-code-haven/angular-temporal)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 A comprehensive Angular wrapper for the [Temporal API](https://tc39.es/proposal-temporal/docs/), leveraging the [@js-temporal/polyfill](https://github.com/js-temporal/temporal-polyfill) package.
@@ -17,7 +17,7 @@ Angular Temporal provides a complete set of Angular utilities to work with the T
 ## Installation
 
 ```bash
-npm install angular-temporal @js-temporal/polyfill
+npm install @the-code-haven/angular-temporal @js-temporal/polyfill
 ```
 
 ## Quick Start

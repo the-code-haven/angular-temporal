@@ -1,6 +1,6 @@
 {
-  "name": "angular-temporal",
-  "version": "0.0.1",
+  "name": "@the-code-haven/angular-temporal",
+  "version": "0.0.3",
   "description": "Angular Temporal provides a complete set of Angular utilities to work with the Temporal API, including components, pipes, directives, and services.",
   "author": {
     "name": "The Code Haven, Inc.",
@@ -10,15 +10,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/the-code-haven/angular-temporal"
   },
   "peerDependencies": {
     "@angular/common": "^19.2.0",
-    "@angular/core": "^19.2.0"
+    "@angular/core": "^19.2.0",
+    "@js-temporal/polyfill": "^0.4.4"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
-    "@js-temporal/polyfill": "^0.4.4"
+    "tslib": "^2.3.0"
   },
   "sideEffects": false
 }
