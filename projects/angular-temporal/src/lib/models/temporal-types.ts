@@ -1,4 +1,4 @@
-import { Temporal } from '@js-temporal/polyfill';
+import { Temporal } from '../utils/polyfill';
 
 // Common types for Temporal values
 export type TemporalDateLike = Temporal.PlainDate | string | object | null;
