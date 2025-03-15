@@ -12,7 +12,7 @@ export class TemporalDatePipe implements PipeTransform {
   transform(
     value: TemporalDateLike,
     formatOptions: TemporalDateFormatOptions = {},
-    locale = 'en-US'
+    locale: string = 'en-US'
   ): string {
     if (!value) {
       return '';

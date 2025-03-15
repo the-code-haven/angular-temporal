@@ -16,7 +16,7 @@ export class TemporalDurationPipe implements PipeTransform {
         unitDisplay: 'long',
     },
     displayStyle: TemporalDurationDisplayStyle = 'long',
-    locale = 'en-US'
+    locale: string = 'en-US'
   ): string {
     if (!value) {
       return '';

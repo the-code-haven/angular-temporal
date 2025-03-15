@@ -13,7 +13,7 @@ export class TemporalZonedDateTimePipe implements PipeTransform {
     value: TemporalZonedDateTimeLike,
     formatOptions: TemporalDateTimeFormatOptions = {},
     timeZone?: string,
-    locale?: 'en-US'
+    locale: string = 'en-US'
   ): string {
     if (!value) {
       return '';
