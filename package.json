@@ -33,7 +33,7 @@
     "test:ci": "ng test angular-temporal --watch=false --browsers=ChromeHeadless --code-coverage",
     "lint": "ng lint angular-temporal",
     "pack": "ng build angular-temporal && cd dist/angular-temporal && npm pack",
-    "publish:lib": "ng build angular-temporal && cd dist/angular-temporal && npm publish"
+    "publish:lib": "ng build angular-temporal && cd dist/angular-temporal && npm publish --access public"
   },
   "prettier": {
     "printWidth": 100,

@@ -68,13 +68,6 @@ jobs:
       
     - name: Run tests with coverage
       run: npm run test:ci
-      
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v5
-      with:
-        files: ./coverage/lcov.info
-        flags: unittests
-        name: codecov-umbrella
         
     - name: Publish to npm
       run: npm run publish:lib
