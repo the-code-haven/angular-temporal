@@ -1,12 +1,39 @@
 {
-  "name": "angular-temporal",
-  "version": "0.0.0",
+  "name": "@the-code-haven/angular-temporal",
+  "version": "1.0.0",
+  "description": "A comprehensive Angular wrapper for the Temporal API, providing components, pipes, directives, and services for working with dates and times. Built with modern signals and full TypeScript support.",
+  "keywords": [
+    "angular",
+    "temporal",
+    "date",
+    "time",
+    "timezone",
+    "calendar",
+    "duration",
+    "signals",
+    "typescript",
+    "polyfill"
+  ],
+  "author": "Umair Hafeez <umair.hafeez.dev@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the-code-haven/angular-temporal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/the-code-haven/angular-temporal/issues"
+  },
+  "homepage": "https://github.com/the-code-haven/angular-temporal#readme",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build": "ng build angular-temporal",
+    "build:watch": "ng build angular-temporal --watch",
+    "test": "ng test angular-temporal",
+    "test:watch": "ng test angular-temporal --watch",
+    "test:ci": "ng test angular-temporal --watch=false --browsers=ChromeHeadless --code-coverage",
+    "lint": "ng lint angular-temporal",
+    "pack": "ng build angular-temporal && cd dist/angular-temporal && npm pack",
+    "publish:lib": "ng build angular-temporal && cd dist/angular-temporal && npm publish"
   },
   "prettier": {
     "printWidth": 100,
@@ -20,27 +47,39 @@
       }
     ]
   },
-  "private": true,
+  "peerDependencies": {
+    "@angular/common": "^19.0.0 || ^20.0.0",
+    "@angular/core": "^19.0.0 || ^20.0.0",
+    "@angular/forms": "^19.0.0 || ^20.0.0",
+    "@js-temporal/polyfill": "^0.4.0"
+  },
   "dependencies": {
+    "@js-temporal/polyfill": "^0.4.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^20.3.3",
+    "@angular/animations": "^20.3.0",
+    "@angular/build": "^20.3.3",
+    "@angular/cli": "^20.3.3",
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
+    "@angular/compiler-cli": "^20.3.0",
     "@angular/core": "^20.3.0",
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
+    "@angular/platform-browser-dynamic": "^20.3.0",
     "@angular/router": "^20.3.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
-  },
-  "devDependencies": {
-    "@angular/cli": "^20.3.3",
-    "@angular/compiler-cli": "^20.3.0",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^20.0.0",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^20.3.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
     "typescript": "~5.9.2"
   }
 }

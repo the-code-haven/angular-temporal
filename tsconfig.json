@@ -13,7 +13,14 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["projects/angular-temporal/src/*"],
+      "@the-code-haven/angular-temporal": ["projects/angular-temporal/src/public-api.ts"],
+      "@the-code-haven/angular-temporal/*": ["projects/angular-temporal/src/lib/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -21,6 +28,5 @@
     "strictInputAccessModifiers": true,
     "typeCheckHostBindings": true,
     "strictTemplates": true
-  },
-  "files": []
+  }
 }

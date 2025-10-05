@@ -1,0 +1,115 @@
+name: ✨ Feature Request
+description: Suggest an idea for this project
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide as much detail as possible to help us understand your request.
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of feature are you requesting?
+      options:
+        - New Component
+        - New Pipe
+        - New Directive
+        - New Service Method
+        - New Utility Function
+        - API Enhancement
+        - Documentation
+        - Example/Demo
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: A clear and concise description of the feature you'd like to see.
+      placeholder: Describe the feature...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: Is your feature request related to a problem? Please describe.
+      placeholder: A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like.
+      placeholder: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions or features you've considered.
+      placeholder: A clear and concise description of any alternative solutions or features you've considered.
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      description: Describe specific use cases for this feature.
+      placeholder: |
+        - Use case 1: ...
+        - Use case 2: ...
+        - Use case 3: ...
+
+  - type: textarea
+    id: api-example
+    attributes:
+      label: API Example
+      description: If you have ideas for the API, please provide examples.
+      placeholder: |
+        ```typescript
+        // Example of how you'd like to use this feature
+        const result = temporalService.newMethod();
+        ```
+      render: typescript
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Low - Nice to have
+        - Medium - Would be helpful
+        - High - Important for my use case
+        - Critical - Blocking my project
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Are you willing to contribute to this feature?
+      options:
+        - label: I am willing to contribute code to implement this feature
+        - label: I am willing to help with testing this feature
+        - label: I am willing to help with documentation for this feature
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct.
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

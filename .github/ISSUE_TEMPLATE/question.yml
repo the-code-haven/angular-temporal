@@ -1,0 +1,82 @@
+name: ❓ Question
+description: Ask a question about the project
+title: "[Question]: "
+labels: ["question", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for asking a question! We're here to help. Please provide as much context as possible.
+
+  - type: dropdown
+    id: question-type
+    attributes:
+      label: Question Type
+      description: What type of question is this?
+      options:
+        - How to use a component
+        - How to use a pipe
+        - How to use a directive
+        - How to use a service
+        - Configuration help
+        - Integration help
+        - Troubleshooting
+        - Best practices
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What would you like to know?
+      placeholder: Ask your question here...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide any relevant context about your question.
+      placeholder: |
+        - What are you trying to achieve?
+        - What have you tried so far?
+        - Any specific requirements or constraints?
+
+  - type: textarea
+    id: code-example
+    attributes:
+      label: Code Example
+      description: If applicable, include relevant code snippets.
+      placeholder: |
+        ```typescript
+        // Your code here
+        ```
+      render: typescript
+
+  - type: input
+    id: angular-version
+    attributes:
+      label: Angular Version
+      description: What version of Angular are you using?
+      placeholder: e.g., 19.0.0, 20.0.0
+
+  - type: input
+    id: library-version
+    attributes:
+      label: Angular Temporal Version
+      description: What version of @the-code-haven/angular-temporal are you using?
+      placeholder: e.g., 1.0.0
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct.
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

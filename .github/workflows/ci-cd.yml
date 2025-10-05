@@ -1,0 +1,140 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # Build and Test Job
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+        angular-version: [19, 20]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Lint library
+      run: npm run lint
+      
+    - name: Build library
+      run: npm run build
+      
+    - name: Run unit tests
+      run: npm run test:ci
+      
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-artifacts-${{ matrix.node-version }}-angular-${{ matrix.angular-version }}
+        path: |
+          dist/
+          coverage/
+
+  # Publish Job (only on main branch)
+  publish:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+        registry-url: 'https://registry.npmjs.org'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build library
+      run: npm run build
+      
+    - name: Run tests with coverage
+      run: npm run test:ci
+      
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage/lcov.info
+        flags: unittests
+        name: codecov-umbrella
+        
+    - name: Publish to npm
+      run: npm run publish:lib
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        
+    - name: Get package version
+      id: get_version
+      run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+      
+    - name: Generate changelog
+      id: changelog
+      run: |
+        # Get commits since last tag
+        if git describe --tags --abbrev=0 >/dev/null 2>&1; then
+          LAST_TAG=$(git describe --tags --abbrev=0)
+          COMMITS=$(git log --pretty=format:"- %s ([%h](https://github.com/${{ github.repository }}/commit/%H))" $LAST_TAG..HEAD)
+        else
+          COMMITS=$(git log --pretty=format:"- %s ([%h](https://github.com/${{ github.repository }}/commit/%H))" --max-count=20)
+        fi
+        
+        # Create changelog
+        cat > CHANGELOG.md << EOF
+        ## What's Changed
+        
+        $COMMITS
+        
+        ## Installation
+        
+        \`\`\`bash
+        npm install @the-code-haven/angular-temporal@${{ steps.get_version.outputs.VERSION }}
+        \`\`\`
+        
+        ## Build Information
+        
+        - **Node.js**: 20.x
+        - **Angular**: Signals compatible
+        - **Coverage**: [View on Codecov](https://codecov.io/gh/${{ github.repository }})
+        
+        ## Full Changelog
+        
+        https://github.com/${{ github.repository }}/compare/$LAST_TAG...v${{ steps.get_version.outputs.VERSION }}
+        EOF
+        
+        # Output changelog for release
+        echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
+        cat CHANGELOG.md >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+        
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: v${{ steps.get_version.outputs.VERSION }}
+        name: Release v${{ steps.get_version.outputs.VERSION }}
+        body: ${{ steps.changelog.outputs.CHANGELOG }}
+        draft: false
+        prerelease: false
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
