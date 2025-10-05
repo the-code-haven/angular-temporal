@@ -6,7 +6,7 @@ Thank you for your interest in contributing to Angular Temporal! This document p
 
 ### Prerequisites
 
-- Node.js 18.x or 20.x
+- Node.js 20.x or 22.x
 - Angular CLI 17+ (for signals compatibility)
 - Git
 
@@ -56,7 +56,6 @@ Thank you for your interest in contributing to Angular Temporal! This document p
 - Follow the existing code style and patterns
 - Use TypeScript strict mode
 - Prefer Angular signals for inputs/outputs
-- Use the `@src` alias for internal imports
 - Follow the Temporal API specifications
 
 ### Angular Temporal Specific Guidelines
@@ -195,10 +194,6 @@ Releases are automated via GitHub Actions:
 3. CI/CD pipeline runs tests and builds
 4. Automatic npm publish and GitHub release
 5. Release notes generated from commit messages
-
-## 🤝 Code of Conduct
-
-This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you agree to uphold this code.
 
 ## 📞 Getting Help
 
