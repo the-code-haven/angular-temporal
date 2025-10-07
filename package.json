@@ -1,5 +1,5 @@
 {
-  "name": "@the-code-haven/angular-temporal",
+  "name": "angular-temporal",
   "version": "1.0.0",
   "description": "A comprehensive Angular wrapper for the Temporal API, providing components, pipes, directives, and services for working with dates and times. Built with modern signals and full TypeScript support.",
   "keywords": [
@@ -18,19 +18,19 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/the-code-haven/angular-temporal.git"
+    "url": "https://github.com/umairhm/angular-temporal.git"
   },
   "bugs": {
-    "url": "https://github.com/the-code-haven/angular-temporal/issues"
+    "url": "https://github.com/umairhm/angular-temporal/issues"
   },
-  "homepage": "https://github.com/the-code-haven/angular-temporal#readme",
+  "homepage": "https://github.com/umairhm/angular-temporal#readme",
   "scripts": {
     "ng": "ng",
     "build": "ng build angular-temporal",
     "build:watch": "ng build angular-temporal --watch",
     "test": "ng test angular-temporal",
     "test:watch": "ng test angular-temporal --watch",
-    "test:ci": "ng test angular-temporal --watch=false --browsers=ChromeHeadless --code-coverage",
+    "test:ci": "ng test angular-temporal --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint angular-temporal",
     "pack": "ng build angular-temporal && cd dist/angular-temporal && npm pack",
     "publish:lib": "ng build angular-temporal && cd dist/angular-temporal && npm publish --access public"

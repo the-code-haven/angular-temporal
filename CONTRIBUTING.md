@@ -197,9 +197,9 @@ Releases are automated via GitHub Actions:
 
 ## 📞 Getting Help
 
-- 💬 [GitHub Discussions](https://github.com/the-code-haven/angular-temporal/discussions)
-- 🐛 [GitHub Issues](https://github.com/the-code-haven/angular-temporal/issues)
-- 📖 [Documentation](https://github.com/the-code-haven/angular-temporal#readme)
+- 💬 [GitHub Discussions](https://github.com/umairhm/angular-temporal/discussions)
+- 🐛 [GitHub Issues](https://github.com/umairhm/angular-temporal/issues)
+- 📖 [Documentation](https://github.com/umairhm/angular-temporal#readme)
 
 ## 🎉 Recognition
 

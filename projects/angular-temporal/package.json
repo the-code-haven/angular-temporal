@@ -1,18 +1,26 @@
 {
-  "name": "@the-code-haven/angular-temporal",
+  "name": "angular-temporal",
   "version": "1.0.0",
   "description": "A comprehensive Angular wrapper for the Temporal API",
-  "keywords": ["angular", "temporal", "date", "time", "timezone", "calendar", "duration"],
+  "keywords": [
+    "angular",
+    "temporal",
+    "date",
+    "time",
+    "timezone",
+    "calendar",
+    "duration"
+  ],
   "author": "The Code Haven",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/the-code-haven/angular-temporal.git"
+    "url": "https://github.com/umairhm/angular-temporal.git"
   },
   "bugs": {
-    "url": "https://github.com/the-code-haven/angular-temporal/issues"
+    "url": "https://github.com/umairhm/angular-temporal/issues"
   },
-  "homepage": "https://github.com/the-code-haven/angular-temporal#readme",
+  "homepage": "https://github.com/umairhm/angular-temporal#readme",
   "peerDependencies": {
     "@angular/common": "^19.0.0 || ^20.0.0",
     "@angular/core": "^19.0.0 || ^20.0.0",

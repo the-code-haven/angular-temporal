@@ -18,8 +18,8 @@
     "baseUrl": ".",
     "paths": {
       "@src/*": ["projects/angular-temporal/src/*"],
-      "@the-code-haven/angular-temporal": ["projects/angular-temporal/src/public-api.ts"],
-      "@the-code-haven/angular-temporal/*": ["projects/angular-temporal/src/lib/*"]
+      "angular-temporal": ["projects/angular-temporal/src/public-api.ts"],
+      "angular-temporal/*": ["projects/angular-temporal/src/lib/*"]
     }
   },
   "angularCompilerOptions": {

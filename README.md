@@ -4,7 +4,7 @@
   <img src="assets/angular-temporal-logo.png" alt="Angular Temporal Logo" width="200" height="200">
 </div>
 
-[![npm version](https://badge.fury.io/js/%40the-code-haven%2Fangular-temporal.svg)](https://badge.fury.io/js/%40the-code-haven%2Fangular-temporal)
+[![npm version](https://badge.fury.io/js/angular-temporal.svg)](https://badge.fury.io/js/angular-temporal)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Angular](https://img.shields.io/badge/Angular-Signals-red.svg)](https://angular.io/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9%2B-blue.svg)](https://www.typescriptlang.org/)
@@ -26,12 +26,11 @@ A comprehensive Angular wrapper for the [Temporal API](https://github.com/tc39/p
 - **Polyfill Wrapper**: Comprehensive polyfill management and validation
 - **Format Presets**: Predefined formatting options for common use cases
 - **Global Date Extension**: Automatic `Date.prototype.toTemporalInstant()` extension
-- **Comprehensive Testing**: 158 tests with 66%+ code coverage
 
 ## 📦 Installation
 
 ```bash
-npm install @the-code-haven/angular-temporal @js-temporal/polyfill
+npm install angular-temporal @js-temporal/polyfill
 ```
 
 ### Peer Dependencies
@@ -48,7 +47,7 @@ This package requires the following peer dependencies:
 ### 1. Import the Module (Optional - for non-standalone usage)
 
 ```typescript
-import { AngularTemporalModule } from '@the-code-haven/angular-temporal';
+import { AngularTemporalModule } from 'angular-temporal';
 
 @NgModule({
   imports: [AngularTemporalModule],
@@ -60,7 +59,7 @@ export class AppModule { }
 ### 2. Use Standalone Components with Signals
 
 ```typescript
-import { TemporalDatePickerComponent } from '@the-code-haven/angular-temporal';
+import { TemporalDatePickerComponent } from 'angular-temporal';
 import { signal } from '@angular/core';
 
 @Component({
@@ -94,7 +93,7 @@ export class ExampleComponent {
 ### 3. Use with Traditional Input/Output
 
 ```typescript
-import { TemporalDatePickerComponent } from '@the-code-haven/angular-temporal';
+import { TemporalDatePickerComponent } from 'angular-temporal';
 
 @Component({
   selector: 'app-example',
@@ -264,7 +263,7 @@ The core service provides comprehensive Temporal API integration with signal-bas
 
 ```typescript
 import { Component, inject } from '@angular/core';
-import { TemporalService, Temporal } from '@the-code-haven/angular-temporal';
+import { TemporalService, Temporal } from 'angular-temporal';
 
 @Component({
   selector: 'app-date-calculator',
@@ -292,7 +291,7 @@ export class DateCalculatorComponent {
 Manage and validate the Temporal polyfill with comprehensive utilities.
 
 ```typescript
-import { temporalPolyfill, Temporal, Intl } from '@the-code-haven/angular-temporal';
+import { temporalPolyfill, Temporal, Intl } from 'angular-temporal';
 
 // Check if polyfill is available
 if (temporalPolyfill.isAvailable()) {
@@ -331,7 +330,7 @@ import {
   TemporalFormatPresets, 
   getFormatPreset, 
   mergeFormatOptions 
-} from '@the-code-haven/angular-temporal';
+} from 'angular-temporal';
 
 // Use predefined presets
 const shortDate = getFormatPreset('dateShort');
@@ -422,7 +421,7 @@ All components support custom CSS classes for complete styling control:
 ### Service Configuration
 
 ```typescript
-import { TemporalService, TemporalServiceConfig } from '@the-code-haven/angular-temporal';
+import { TemporalService, TemporalServiceConfig } from 'angular-temporal';
 
 // Configure globally
 this.temporalService.setConfig({
@@ -458,7 +457,7 @@ interface TemporalPickerConfig {
 
 ```typescript
 import { TestBed } from '@angular/core/testing';
-import { TemporalService } from '@the-code-haven/angular-temporal';
+import { TemporalService } from 'angular-temporal';
 
 describe('TemporalService', () => {
   let service: TemporalService;
@@ -608,10 +607,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or need help, please:
 
-1. Check the [documentation](https://github.com/the-code-haven/angular-temporal#readme)
-2. Search [existing issues](https://github.com/the-code-haven/angular-temporal/issues)
-3. Create a [new issue](https://github.com/the-code-haven/angular-temporal/issues/new)
+1. Check the [documentation](https://github.com/umairhm/angular-temporal#readme)
+2. Search [existing issues](https://github.com/umairhm/angular-temporal/issues)
+3. Create a [new issue](https://github.com/umairhm/angular-temporal/issues/new)
 
 ---
 
-Made with ❤️ by [The Code Haven](https://github.com/the-code-haven)
+Made with ❤️ by [Umair Hafeez](https://github.com/umairhm)

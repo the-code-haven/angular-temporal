@@ -91,7 +91,7 @@ body:
     id: library-version
     attributes:
       label: Angular Temporal Version
-      description: What version of @the-code-haven/angular-temporal are you using?
+      description: What version of angular-temporal are you using?
       placeholder: e.g., 1.0.0
     validations:
       required: true

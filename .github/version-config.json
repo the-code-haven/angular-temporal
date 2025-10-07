@@ -1,0 +1,56 @@
+{
+  "versions": {
+    "19": {
+      "angular": "^19.0.0",
+      "typescript": "~5.4.0",
+      "zone.js": "~0.14.0",
+      "node": {
+        "20": "^20.0.0",
+        "22": "^22.0.0"
+      }
+    },
+    "20": {
+      "angular": "^20.0.0",
+      "typescript": "~5.4.0",
+      "zone.js": "~0.14.0",
+      "node": {
+        "20": "^20.0.0",
+        "22": "^22.0.0"
+      }
+    }
+  },
+  "angularPackages": [
+    "@angular/animations",
+    "@angular/common",
+    "@angular/compiler",
+    "@angular/compiler-cli",
+    "@angular/core",
+    "@angular/forms",
+    "@angular/platform-browser",
+    "@angular/platform-browser-dynamic",
+    "@angular/router",
+    "@angular/cli",
+    "@angular-devkit/build-angular",
+    "@angular/build",
+    "ng-packagr",
+    "@angular-eslint/builder",
+    "@angular-eslint/eslint-plugin",
+    "@angular-eslint/eslint-plugin-template",
+    "@angular-eslint/schematics",
+    "@angular-eslint/template-parser"
+  ],
+  "secondaryPackages": {
+    "angular-eslint": {
+      "19": "^19.0.0",
+      "20": "^20.0.0"
+    },
+    "typescript": {
+      "19": "~5.4.0",
+      "20": "~5.4.0"
+    },
+    "rxjs": {
+      "19": "~7.8.0",
+      "20": "~7.8.0"
+    }
+  }
+}

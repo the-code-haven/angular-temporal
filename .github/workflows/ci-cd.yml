@@ -26,9 +26,22 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         
+    - name: Update dependency versions
+      run: |
+        node .github/scripts/update-versions.js ${{ matrix.angular-version }} ${{ matrix.node-version }}
+        
     - name: Install dependencies
       run: npm ci
-      
+        
+    - name: Verify versions
+      run: |
+        echo "Angular versions:"
+        npm list @angular/core
+        echo "Node.js type definitions:"
+        npm list @types/node
+        echo "TypeScript version:"
+        npm list typescript
+        
     - name: Build library
       run: npm run build
       
@@ -39,9 +52,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: build-artifacts-${{ matrix.node-version }}-angular-${{ matrix.angular-version }}
-        path: |
-          dist/
-          coverage/
+        path: dist/
 
   # Publish Job (only on main branch)
   publish:
@@ -98,7 +109,7 @@ jobs:
         ## Installation
         
         \`\`\`bash
-        npm install @the-code-haven/angular-temporal@${{ steps.get_version.outputs.VERSION }}
+        npm install angular-temporal@${{ steps.get_version.outputs.VERSION }}
         \`\`\`
         
         ## Build Information
@@ -127,4 +138,4 @@ jobs:
         prerelease: false
         generate_release_notes: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ANGULAR_TEMPORAL_ACTIONS }}

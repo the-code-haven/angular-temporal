@@ -80,7 +80,7 @@
 
 ```typescript
 // Example usage of new features
-import { TemporalService } from '@the-code-haven/angular-temporal';
+import { TemporalService } from 'angular-temporal';
 
 // Your example code here
 ```
