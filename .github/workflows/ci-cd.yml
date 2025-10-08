@@ -114,7 +114,6 @@ jobs:
         
         - **Node.js**: 20.x
         - **Angular**: Signals compatible
-        - **Coverage**: [View on Codecov](https://codecov.io/gh/${{ github.repository }})
         
         ## Full Changelog
         

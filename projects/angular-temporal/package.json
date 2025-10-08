@@ -1,6 +1,6 @@
 {
   "name": "angular-temporal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A comprehensive Angular wrapper for the Temporal API",
   "keywords": [
     "angular",
