@@ -1,10 +1,6 @@
-import { 
-  TemporalFormatOptions, 
-  TemporalFormatPresetKey,
-  getFormatPreset,
-  TemporalFormatPresets,
-  mergeFormatOptions,
-  validateFormatOptions
+import {
+    getFormatPreset, mergeFormatOptions, TemporalFormatOptions, TemporalFormatPresetKey,
+    TemporalFormatPresets, validateFormatOptions
 } from './temporal-format-options';
 
 describe('TemporalFormatOptions', () => {

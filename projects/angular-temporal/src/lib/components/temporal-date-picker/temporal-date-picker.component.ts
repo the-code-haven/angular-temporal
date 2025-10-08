@@ -1,10 +1,12 @@
-import { Component, input, output, forwardRef, inject, OnInit, signal, computed, effect } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Temporal } from '../../utils/polyfill';
+import {
+    Component, computed, effect, forwardRef, inject, input, OnInit, output, signal
+} from '@angular/core';
+import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
+
 import { TemporalService } from '../../services/temporal.service';
 import { TemporalPickerConfig } from '../../types/temporal.types';
+import { Temporal } from '../../utils/polyfill';
 
 @Component({
   selector: 'temporal-date-picker',

@@ -1,4 +1,4 @@
-import { Temporal, Intl, toTemporalInstant } from '@js-temporal/polyfill';
+import { Intl, Temporal, toTemporalInstant } from '@js-temporal/polyfill';
 
 declare global {
   interface Date {

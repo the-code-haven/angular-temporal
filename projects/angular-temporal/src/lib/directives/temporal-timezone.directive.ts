@@ -1,7 +1,8 @@
-import { Directive, ElementRef, Input, OnInit, OnDestroy, inject } from '@angular/core';
-import { Temporal } from '../utils/polyfill';
+import { Directive, ElementRef, inject, Input, OnDestroy, OnInit } from '@angular/core';
+
 import { TemporalService } from '../services/temporal.service';
 import { TemporalFormatOptions } from '../types/temporal.types';
+import { Temporal } from '../utils/polyfill';
 
 @Directive({
   selector: '[temporalTimezone]',

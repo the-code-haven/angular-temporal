@@ -1,7 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
-import { TemporalInputDirective } from './temporal-input.directive';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { TemporalService } from '../services/temporal.service';
+import { TemporalInputDirective } from './temporal-input.directive';
 
 @Component({
   template: '<input temporalInput="date" [temporalConfig]="config" [temporalValue]="value">'

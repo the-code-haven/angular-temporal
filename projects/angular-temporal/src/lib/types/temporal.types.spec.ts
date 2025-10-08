@@ -1,16 +1,8 @@
-import { 
-  TemporalServiceConfig,
-  TemporalFormatOptions,
-  TemporalComparisonResult,
-  TemporalRange,
-  TemporalValidationResult,
-  TemporalFormValue,
-  TemporalInputConfig,
-  TemporalPickerConfig,
-  TemporalSignalConfig,
-  TemporalComponentConfig,
-  TemporalDirectiveConfig,
-  TemporalPipeConfig
+import {
+    TemporalComparisonResult, TemporalComponentConfig, TemporalDirectiveConfig,
+    TemporalFormatOptions, TemporalFormValue, TemporalInputConfig, TemporalPickerConfig,
+    TemporalPipeConfig, TemporalRange, TemporalServiceConfig, TemporalSignalConfig,
+    TemporalValidationResult
 } from './temporal.types';
 
 describe('Temporal Types', () => {

@@ -1,7 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
-import { TemporalTimezoneDirective } from './temporal-timezone.directive';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { TemporalService } from '../services/temporal.service';
+import { TemporalTimezoneDirective } from './temporal-timezone.directive';
 
 @Component({
   template: '<div temporalTimezone="UTC" [temporalValue]="value"></div>'

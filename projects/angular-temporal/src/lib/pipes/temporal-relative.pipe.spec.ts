@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
-import { TemporalRelativePipe } from './temporal-relative.pipe';
+
 import { Temporal } from '../utils/polyfill';
+import { TemporalRelativePipe } from './temporal-relative.pipe';
 
 describe('TemporalRelativePipe', () => {
   let pipe: TemporalRelativePipe;

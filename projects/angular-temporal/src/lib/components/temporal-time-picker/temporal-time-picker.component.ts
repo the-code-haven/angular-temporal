@@ -1,10 +1,10 @@
-import { Component, Input, Output, EventEmitter, forwardRef, inject, OnInit } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Temporal } from '../../utils/polyfill';
+import { Component, EventEmitter, forwardRef, inject, Input, OnInit, Output } from '@angular/core';
+import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
+
 import { TemporalService } from '../../services/temporal.service';
 import { TemporalPickerConfig } from '../../types/temporal.types';
+import { Temporal } from '../../utils/polyfill';
 
 @Component({
   selector: 'temporal-time-picker',

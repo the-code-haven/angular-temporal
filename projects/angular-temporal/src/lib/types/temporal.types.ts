@@ -1,5 +1,7 @@
-import { Temporal } from '../utils/polyfill';
 import { Signal } from '@angular/core';
+
+import { Temporal } from '../utils/polyfill';
+
 import type { TemporalFormatOptions, TemporalFormatPresetKey } from '../types/temporal-format-options';
 
 export { Temporal };

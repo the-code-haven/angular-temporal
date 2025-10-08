@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
-import { TemporalService } from './temporal.service';
+
 import { Temporal } from '../utils/polyfill';
+import { TemporalService } from './temporal.service';
 
 describe('TemporalService', () => {
   let service: TemporalService;

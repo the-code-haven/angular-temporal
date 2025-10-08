@@ -1,13 +1,10 @@
-import { Injectable, signal, computed } from '@angular/core';
-import { temporalPolyfill, Temporal } from '../utils/polyfill';
+import { computed, Injectable, signal } from '@angular/core';
+
 import {
-  TemporalServiceConfig,
-  TemporalFormatOptions,
-  TemporalComparisonResult,
-  TemporalRange,
-  TemporalValidationResult,
-  TemporalFormValue,
+    TemporalComparisonResult, TemporalFormatOptions, TemporalFormValue, TemporalRange,
+    TemporalServiceConfig, TemporalValidationResult
 } from '../types/temporal.types';
+import { Temporal, temporalPolyfill } from '../utils/polyfill';
 
 @Injectable({
   providedIn: 'root'

@@ -1,7 +1,8 @@
-import { Pipe, PipeTransform, inject, input } from '@angular/core';
-import { Temporal } from '../utils/polyfill';
+import { inject, input, Pipe, PipeTransform } from '@angular/core';
+
 import { TemporalService } from '../services/temporal.service';
 import { TemporalFormatOptions } from '../types/temporal.types';
+import { Temporal } from '../utils/polyfill';
 
 @Pipe({
   name: 'temporalInstant',

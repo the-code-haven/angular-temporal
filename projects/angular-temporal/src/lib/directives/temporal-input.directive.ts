@@ -1,8 +1,9 @@
-import { Directive, ElementRef, Input, OnInit, OnDestroy, inject, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR, FormControl } from '@angular/forms';
-import { Temporal } from '../utils/polyfill';
+import { Directive, ElementRef, forwardRef, inject, Input, OnDestroy, OnInit } from '@angular/core';
+import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+
 import { TemporalService } from '../services/temporal.service';
-import { TemporalInputConfig, TemporalFormValue } from '../types/temporal.types';
+import { TemporalFormValue, TemporalInputConfig } from '../types/temporal.types';
+import { Temporal } from '../utils/polyfill';
 
 @Directive({
   selector: 'input[temporalInput]',
