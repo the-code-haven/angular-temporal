@@ -114,10 +114,7 @@ jobs:
         
         - **Node.js**: 20.x
         - **Angular**: Signals compatible
-        
-        ## Full Changelog
-        
-        https://github.com/${{ github.repository }}/compare/$LAST_TAG...v${{ steps.get_version.outputs.VERSION }}
+
         EOF
         
         # Output changelog for release
