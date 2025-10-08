@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { TemporalInstantPipe } from './temporal-instant.pipe';
-import { Temporal } from '@src/lib/utils/polyfill';
+import { Temporal } from '../utils/polyfill';
 
 describe('TemporalInstantPipe', () => {
   let pipe: TemporalInstantPipe;

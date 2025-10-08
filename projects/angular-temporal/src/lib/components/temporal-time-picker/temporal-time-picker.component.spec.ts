@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { TemporalTimePickerComponent } from './temporal-time-picker.component';
-import { TemporalService } from '@src/lib/services/temporal.service';
-import { Temporal } from '@src/lib/utils/polyfill';
+import { TemporalService } from '../../services/temporal.service';
+import { Temporal } from '../../utils/polyfill';
 
 describe('TemporalTimePickerComponent', () => {
   let component: TemporalTimePickerComponent;

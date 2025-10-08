@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { TemporalDateTimePipe } from './temporal-date-time.pipe';
-import { Temporal } from '@src/lib/utils/polyfill';
+import { Temporal } from '../utils/polyfill';
 
 describe('TemporalDateTimePipe', () => {
   let pipe: TemporalDateTimePipe;

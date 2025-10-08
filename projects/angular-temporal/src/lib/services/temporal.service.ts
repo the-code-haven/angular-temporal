@@ -1,5 +1,5 @@
 import { Injectable, signal, computed } from '@angular/core';
-import { temporalPolyfill, Temporal } from '@src/lib/utils/polyfill';
+import { temporalPolyfill, Temporal } from '../utils/polyfill';
 import {
   TemporalServiceConfig,
   TemporalFormatOptions,

@@ -15,12 +15,7 @@
     "target": "ES2022",
     "module": "preserve",
     "resolveJsonModule": true,
-    "baseUrl": ".",
-    "paths": {
-      "@src/*": ["projects/angular-temporal/src/*"],
-      "angular-temporal": ["projects/angular-temporal/src/public-api.ts"],
-      "angular-temporal/*": ["projects/angular-temporal/src/lib/*"]
-    }
+    "baseUrl": "."
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

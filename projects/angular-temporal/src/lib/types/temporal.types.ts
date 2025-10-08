@@ -1,6 +1,6 @@
-import { Temporal } from '@src/lib/utils/polyfill';
+import { Temporal } from '../utils/polyfill';
 import { Signal } from '@angular/core';
-import type { TemporalFormatOptions, TemporalFormatPresetKey } from '@src/lib/types/temporal-format-options';
+import type { TemporalFormatOptions, TemporalFormatPresetKey } from '../types/temporal-format-options';
 
 export { Temporal };
 export type PlainDate = Temporal.PlainDate;

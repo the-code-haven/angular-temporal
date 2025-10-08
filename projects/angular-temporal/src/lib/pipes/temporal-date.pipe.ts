@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform, inject, input, signal } from '@angular/core';
-import { Temporal } from '@src/lib/utils/polyfill';
-import { TemporalService } from '@src/lib/services/temporal.service';
-import { TemporalFormatOptions } from '@src/lib/types/temporal.types';
+import { Temporal } from '../utils/polyfill';
+import { TemporalService } from '../services/temporal.service';
+import { TemporalFormatOptions } from '../types/temporal.types';
 
 @Pipe({
   name: 'temporalDate',
