@@ -13,7 +13,7 @@ jobs:
     
     strategy:
       matrix:
-        node-version: [20.x, 22.x]
+        node-version: [20, 22]
         angular-version: [19, 20]
     
     steps:
@@ -31,7 +31,7 @@ jobs:
         node .github/scripts/update-versions.js ${{ matrix.angular-version }} ${{ matrix.node-version }}
         
     - name: Install dependencies
-      run: npm ci
+      run: rm -rf node_modules package-lock.json && npm i
         
     - name: Verify versions
       run: |
@@ -47,12 +47,8 @@ jobs:
       
     - name: Run unit tests
       run: npm run test:ci
-      
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: build-artifacts-${{ matrix.node-version }}-angular-${{ matrix.angular-version }}
-        path: dist/
+      env:
+        CI: true
 
   # Publish Job (only on main branch)
   publish:
@@ -67,7 +63,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v5
       with:
-        node-version: '20.x'
+        node-version: '20'
         cache: 'npm'
         registry-url: 'https://registry.npmjs.org'
         
@@ -79,6 +75,8 @@ jobs:
       
     - name: Run tests with coverage
       run: npm run test:ci
+      env:
+        CI: true
         
     - name: Publish to npm
       run: npm run publish:lib

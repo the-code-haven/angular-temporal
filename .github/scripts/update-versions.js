@@ -88,8 +88,8 @@ const updatePackageJson = (packagePath) => {
 
   // Update zone.js
   if (pkg.dependencies?.['zone.js'] || pkg.devDependencies?.['zone.js']) {
-    updateDependencyVersion(pkg.dependencies, 'zone.js', versionConfig.zone.js);
-    updateDependencyVersion(pkg.devDependencies, 'zone.js', versionConfig.zone.js);
+    updateDependencyVersion(pkg.dependencies, 'zone.js', versionConfig['zone.js']);
+    updateDependencyVersion(pkg.devDependencies, 'zone.js', versionConfig['zone.js']);
     console.log('Updated zone.js version');
   }
 
