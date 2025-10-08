@@ -1,7 +1,7 @@
 # Angular Temporal
 
 <div align="center">
-  <img src="assets/angular-temporal-logo.png" alt="Angular Temporal Logo" width="200" height="200">
+  <img src="../../assets/angular-temporal-logo.png" alt="Angular Temporal Logo" width="200" height="200">
 </div>
 
 [![npm version](https://badge.fury.io/js/angular-temporal.svg)](https://badge.fury.io/js/angular-temporal)
