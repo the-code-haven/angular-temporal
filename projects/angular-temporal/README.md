@@ -1,7 +1,7 @@
 # Angular Temporal
 
 <div align="center">
-  <img src="../../assets/angular-temporal-logo.png" alt="Angular Temporal Logo" width="200" height="200">
+  <img src="https://github.com/umairhm/angular-temporal/raw/main/assets/angular-temporal-logo.png" alt="Angular Temporal Logo" width="200" height="200">
 </div>
 
 [![npm version](https://badge.fury.io/js/angular-temporal.svg)](https://badge.fury.io/js/angular-temporal)
@@ -554,6 +554,10 @@ public readonly defaultLocale = computed(() => this.config().defaultLocale || 'e
 public readonly defaultTimezone = computed(() => this.config().defaultTimezone || 'UTC');
 ```
 
+### More Examples
+
+We have compiled a comprehensive list of examples and best practices in the [EXAMPLES](https://github.com/umairhm/angular-temporal/blob/main/EXAMPLES.md) document.
+
 ## 📚 Why Temporal?
 
 The Temporal API addresses many problems with JavaScript's built-in `Date` object:
@@ -568,7 +572,7 @@ The Temporal API addresses many problems with JavaScript's built-in `Date` objec
 
 ## 🤝 Contributing
 
-We welcome contributions to Angular Temporal! Please see our [Contributing Guide](CONTRIBUTING.md) for detailed information on how to contribute.
+We welcome contributions to Angular Temporal! Please see our [Contributing Guide](https://github.com/umairhm/angular-temporal/blob/main/CONTRIBUTING.md) for detailed information on how to contribute.
 
 ### Quick Start for Contributors
 
@@ -594,7 +598,7 @@ We welcome contributions to Angular Temporal! Please see our [Contributing Guide
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/umairhm/angular-temporal/blob/main/LICENSE) file for details.
 
 ## 🔗 References
 

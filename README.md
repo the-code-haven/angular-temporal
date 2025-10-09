@@ -554,6 +554,10 @@ public readonly defaultLocale = computed(() => this.config().defaultLocale || 'e
 public readonly defaultTimezone = computed(() => this.config().defaultTimezone || 'UTC');
 ```
 
+### More Examples
+
+We have compiled a comprehensive list of examples and best practices in the [EXAMPLES](EXAMPLES.md) document.
+
 ## 📚 Why Temporal?
 
 The Temporal API addresses many problems with JavaScript's built-in `Date` object:
